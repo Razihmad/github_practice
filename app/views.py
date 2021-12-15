@@ -16,5 +16,5 @@ def ra(request):
 
 
 def testing(request):
-    return HttpResponse('workign tree clean not possible')
+    return HttpResponse('workign tree clean not possible nothing to worry')
 
