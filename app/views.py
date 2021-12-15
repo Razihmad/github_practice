@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from app.models import FileModel
 # Create your views here.
 def home(request):
@@ -8,3 +8,9 @@ def home(request):
         f.save()
 
     return render(request,'home.html')
+
+
+def ra(request):
+    return HttpResponse('nothing to be worried')
+
+
