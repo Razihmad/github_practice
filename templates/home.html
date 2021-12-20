@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load socialaccount %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,5 +31,13 @@
             <input type="number" name="" id="">
         </form>
     </div>
+
+
+    {% if user.is_authenticated %}
+     <h1>Welcome</h1> {{user.username}}
+     {% else %}
+     Login here <a href="{% provider_login_url 'google' %}">Google</a>
+
+    {% endif %}
 </body>
 </html>
